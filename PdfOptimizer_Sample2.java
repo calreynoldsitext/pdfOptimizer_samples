@@ -24,7 +24,6 @@ public class PdfOptimizer_Sample {
         PdfOptimizer optimizer = new PdfOptimizer();
 
         optimizer.addOptimizationHandler(new FontDuplicationOptimizer());
-
         optimizer.addOptimizationHandler(new CompressionOptimizer());
 
         ImageQualityOptimizer jpeg_optimizer = new ImageQualityOptimizer();
