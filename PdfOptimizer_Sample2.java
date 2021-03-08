@@ -3,7 +3,7 @@ import com.itextpdf.pdfoptimizer.PdfOptimizer;
 import com.itextpdf.pdfoptimizer.handlers.CompressionOptimizer;
 import com.itextpdf.pdfoptimizer.handlers.FontDuplicationOptimizer;
 import com.itextpdf.pdfoptimizer.handlers.ImageQualityOptimizer;
-import com.itextpdf.pdfoptimizer.handlers.imagequality.processors.BitmapCompressor;
+import com.itextpdf.pdfoptimizer.handlers.imagequality.processors.JpegCompressor;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class PdfOptimizer_Sample {
     public static String DEST = "output_optimized.pdf";
 
     public static void main(String args[]) throws IOException {
-        PdfOptimizer_Sample2 test = new PdfOptimizer_Sample2();
+        PdfOptimizer_Sample test = new PdfOptimizer_Sample();
         test.pdfOptimizerTest();
     }
 
@@ -27,9 +27,9 @@ public class PdfOptimizer_Sample {
 
         optimizer.addOptimizationHandler(new CompressionOptimizer());
 
-        ImageQualityOptimizer tiff_optimizer = new ImageQualityOptimizer();
-        tiff_optimizer.setTiffProcessor(new BitmapCompressor(.5f, .5f));
-        optimizer.addOptimizationHandler(new ImageQualityOptimizer());
+        ImageQualityOptimizer jpeg_optimizer = new ImageQualityOptimizer();
+        jpeg_optimizer.setJpegProcessor(new JpegCompressor(0.5f));
+        optimizer.addOptimizationHandler(jpeg_optimizer);
 
         optimizer.optimize(
                 new File(SRC),
