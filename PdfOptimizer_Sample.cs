@@ -39,6 +39,9 @@ namespace itext_dev.Optimizer_Demo
 
             // Removes duplicate instances of font files embedded within documents.
             optimizer.AddOptimizationHandler(new FontDuplicationOptimizer());
+            
+            // Removes all character data per font which is not actively utilized in the input document.
+            optimizer.AddOptimizationHandler(new FontSubsettingOptimizer());
 
             /* Scales down and compresses Image objects. In this case, we scale and compress a
                  Tiff image by 50% */
