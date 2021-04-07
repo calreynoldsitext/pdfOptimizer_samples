@@ -45,6 +45,9 @@ public class PdfOptimizer_Sample {
 
         // Removes duplicate instances of font files embedded within documents.
         optimizer.addOptimizationHandler(new FontDuplicationOptimizer());
+        
+        // Removes all character data per font which is not actively utilized in the input document.
+        optimizer.addOptimizationHandler(new FontSubsettingOptimizer());
 
         /* Scales down and compresses Image objects. In this case, we scale and compress a
              Tiff image by 50% */
