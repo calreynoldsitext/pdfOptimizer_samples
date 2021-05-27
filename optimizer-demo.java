@@ -1,4 +1,5 @@
 import com.itextpdf.licensekey.LicenseKey;
+
 import com.itextpdf.pdfoptimizer.PdfOptimizer;
 import com.itextpdf.pdfoptimizer.handlers.ColorSpaceConverter;
 import com.itextpdf.pdfoptimizer.handlers.CompressionOptimizer;
@@ -17,6 +18,9 @@ public class PdfOptimizer_Demo_Lab {
    private static final String ORIG = "/uploads/optimize.pdf";
    private static final String OUTPUT_FOLDER = "/myfiles/";
 
+   public static float compression_level = 0.5f;
+   public static float image_scalar_level = 0.5f;
+
     public static void main(String args[]) throws IOException {
         PdfOptimizer_Demo_Lab demo = new PdfOptimizer_Demo_Lab();
         demo.pdfOptimizerTest();
@@ -33,7 +37,7 @@ public class PdfOptimizer_Demo_Lab {
         optimizer.addOptimizationHandler(new FontSubsettingOptimizer());
 
         ImageQualityOptimizer tiff_optimizer = new ImageQualityOptimizer();
-        tiff_optimizer.setTiffProcessor(new BitmapCompressor(.5f, .5f));
+        tiff_optimizer.setTiffProcessor(new BitmapCompressor(image_scalar_level, compression_level));
         optimizer.addOptimizationHandler(new ImageQualityOptimizer());
 
         optimizer.addOptimizationHandler(new CompressionOptimizer());
