@@ -1,10 +1,7 @@
 import com.itextpdf.licensekey.LicenseKey;
 
 import com.itextpdf.pdfoptimizer.PdfOptimizer;
-import com.itextpdf.pdfoptimizer.handlers.ColorSpaceConverter;
-import com.itextpdf.pdfoptimizer.handlers.CompressionOptimizer;
-import com.itextpdf.pdfoptimizer.handlers.FontDuplicationOptimizer;
-import com.itextpdf.pdfoptimizer.handlers.ImageQualityOptimizer;
+import com.itextpdf.pdfoptimizer.handlers.*;
 import com.itextpdf.pdfoptimizer.handlers.converters.ColorConversionMode;
 import com.itextpdf.pdfoptimizer.handlers.converters.CsConverterProperties;
 import com.itextpdf.pdfoptimizer.handlers.converters.RgbToCmykCsConverter;
