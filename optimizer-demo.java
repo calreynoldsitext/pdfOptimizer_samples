@@ -1,7 +1,11 @@
 import com.itextpdf.licensekey.LicenseKey;
 
 import com.itextpdf.pdfoptimizer.PdfOptimizer;
-import com.itextpdf.pdfoptimizer.handlers.*;
+import com.itextpdf.pdfoptimizer.handlers.ColorSpaceConverter;
+import com.itextpdf.pdfoptimizer.handlers.CompressionOptimizer;
+import com.itextpdf.pdfoptimizer.handlers.FontDuplicationOptimizer;
+import com.itextpdf.pdfoptimizer.handlers.FontSubsettingOptimizer;
+import com.itextpdf.pdfoptimizer.handlers.ImageQualityOptimizer;
 import com.itextpdf.pdfoptimizer.handlers.converters.ColorConversionMode;
 import com.itextpdf.pdfoptimizer.handlers.converters.CsConverterProperties;
 import com.itextpdf.pdfoptimizer.handlers.converters.RgbToCmykCsConverter;
@@ -20,12 +24,10 @@ public class PdfOptimizer_Demo_Lab {
 
     public static void main(String args[]) throws IOException {
         PdfOptimizer_Demo_Lab demo = new PdfOptimizer_Demo_Lab();
-        demo.pdfOptimizerTest();
+        demo.pdfOptimizerDemo();
     }
 
     public void pdfOptimizerDemo() throws IOException {
-
-        LicenseKey.loadLicenseFile("iText7_licensekey.xml");
 
         PdfOptimizer optimizer = new PdfOptimizer();
 
@@ -45,7 +47,7 @@ public class PdfOptimizer_Demo_Lab {
         optimizer.addOptimizationHandler(RGB_to_CMYK_Converter);
 
         optimizer.optimize(
-                new File(SRC),
-                new File(DEST));
+                new File(ORIG),
+                new File(OUTPUT_FOLDER));
     }
 }
