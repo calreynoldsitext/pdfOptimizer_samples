@@ -19,7 +19,7 @@ namespace PdfOptimizer_Demo_Lab
         
         public static void Main()
         {
-            PdfOptimizer_Sample test = new PdfOptimizer_Sample();
+            PdfOptimizer_Demo test = new PdfOptimizer_Demo();
             test.PdfOptimizerDemo();
         }
 
