@@ -7,16 +7,16 @@ using iText.Pdfoptimizer.Handlers.Imagequality.Processors;
 
 using System.IO;
 
-namespace PdfOptimizer_Demo_Lab  
+namespace PdfOptimizer_Demo_Lab
 {
     class PdfOptimizer_Demo
     {
-        public static String ORIG = "/uploads/input.pdf";
-        public static String OUTPUT_FILE = "/myfiles/output.pdf";
-        
+        public static string ORIG = "/uploads/input.pdf";
+        public static string OUTPUT_FILE = "/myfiles/output.pdf";
+
         public static float compression_level = 0.5f;
         public static float image_scalar_level = 0.5f;
-        
+
         public static void Main()
         {
             PdfOptimizer_Demo test = new PdfOptimizer_Demo();
@@ -29,7 +29,7 @@ namespace PdfOptimizer_Demo_Lab
             PdfOptimizer optimizer = new PdfOptimizer();
 
             optimizer.AddOptimizationHandler(new FontDuplicationOptimizer());
-            
+
             optimizer.AddOptimizationHandler(new FontSubsettingOptimizer());
 
             ImageQualityOptimizer tiff_optimizer = new ImageQualityOptimizer();
