@@ -17,7 +17,7 @@ import java.io.IOException;
 public class PdfOptimizer_Demo_Lab {
 
    private static final String ORIG = "/uploads/optimize.pdf";
-   private static final String OUTPUT_FOLDER = "/myfiles/output_optimized.pdf";
+   private static final String OUTPUT_FILE = "/myfiles/output_optimized.pdf";
 
    public static float compression_level = 0.5f;
    public static float image_scalar_level = 0.5f;
