@@ -11,8 +11,8 @@ namespace PdfOptimizer_Demo_Lab
 {
     class PdfOptimizer_Demo
     {
-        public static String ORIG = "/uploads/input.pdf"
-        public static String OUTPUT_FILE = "/myfiles/output.pdf"
+        public static String ORIG = "/uploads/input.pdf";
+        public static String OUTPUT_FILE = "/myfiles/output.pdf";
         
         public static float compression_level = 0.5f;
         public static float image_scalar_level = 0.5f;
