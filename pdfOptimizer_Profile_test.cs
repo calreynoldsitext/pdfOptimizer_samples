@@ -1,7 +1,8 @@
 using iText.Pdfoptimizer;
-using iText.Pdfoptimizer.Handlers;
-using iText.Pdfoptimizer.Handlers.Converters;
-using iText.Pdfoptimizer.Handlers.Imagequality.Processors;
+using iText.Pdfoptimizer.Report.Builder;
+using iText.Pdfoptimizer.Report.Message;
+using iText.Pdfoptimizer.Report.Publisher;
+
 using System.IO;
 
 namespace PdfOptimizer_Examples
@@ -28,3 +29,4 @@ namespace PdfOptimizer_Examples
                     new FileStream(OUTPUT_FILE, FileMode.Create));
         }
     }
+}
