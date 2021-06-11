@@ -4,9 +4,9 @@ using iText.Pdfoptimizer.Handlers.Converters;
 using iText.Pdfoptimizer.Handlers.Imagequality.Processors;
 using System.IO;
 
-namespace PdfOptimizer_Demo_Lab
+namespace PdfOptimizer_Examples
 {
-    class PdfOptimizer_Demo
+    class PdfOptimizer_Lossless_Example
     {
         public static string ORIG = "/uploads/input.pdf";
         public static string OUTPUT_FILE = "/myfiles/output.pdf";
